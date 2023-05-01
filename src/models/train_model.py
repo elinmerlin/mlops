@@ -47,7 +47,7 @@ def get_datasets(train_path, valid_path):
     df_train["PU_DO"] = df_train["PULocationID"] + "_" + df_train["DOLocationID"]
     df_valid["PU_DO"] = df_valid["PULocationID"] + "_" + df_valid["DOLocationID"]
 
-    categorical = ["PU_DO", "month", "day_of_month", "day_of_week", "hour"] #'PULocationID', 'DOLocationID']
+    categorical = ["month", "day_of_month", "day_of_week", "hour"] #'PULocationID', 'DOLocationID', "PU_DO"]
     numerical = ["trip_distance"]
     target = "duration"
     selected_features = categorical + numerical

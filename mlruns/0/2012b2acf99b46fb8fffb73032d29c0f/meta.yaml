@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/macbook/Documents/DataScience/mlops/mlruns/0/2012b2acf99b46fb8fffb73032d29c0f/artifacts
+end_time: 1682963630840
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2012b2acf99b46fb8fffb73032d29c0f
+run_name: learned-hare-632
+run_uuid: 2012b2acf99b46fb8fffb73032d29c0f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1682963630815
+status: 3
+tags: []
+user_id: macbook
