@@ -1,0 +1,6 @@
+defaults:
+  - _self_
+  - model: lin_reg
+
+train_data: data/external/green_tripdata_2021-01.parquet
+valid_data: data/external/green_tripdata_2021-02.parquet

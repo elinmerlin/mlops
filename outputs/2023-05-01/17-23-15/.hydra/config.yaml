@@ -1,0 +1,6 @@
+train_data: data/external/green_tripdata_2021-01.parquet
+valid_data: data/external/green_tripdata_2021-02.parquet
+model:
+  _target_: sklearn.tree.DecisionTreeRegressor
+  max_depth: 6
+  min_samples_leaf: 1

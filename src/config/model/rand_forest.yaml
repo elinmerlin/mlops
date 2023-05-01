@@ -1,0 +1,4 @@
+_target_: sklearn.ensemble.RandomForestRegressor
+max_depth: 6
+n_estimators: 50
+min_samples_leaf: 1

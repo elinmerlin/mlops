@@ -1,0 +1,6 @@
+train_data: data/external/green_tripdata_2021-01.parquet
+valid_data: data/external/green_tripdata_2021-02.parquet
+model:
+  _target_: sklearn.linear_model.LinearRegression
+  n_estimators: 100
+  criterion: squared_error

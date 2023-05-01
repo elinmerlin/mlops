@@ -1,0 +1,5 @@
+_target_: sklearn.ensemble.GradientBoostingRegressor
+max_depth: 4
+min_samples_leaf: 1
+n_estimators: 50
+learning_rate: 0.05

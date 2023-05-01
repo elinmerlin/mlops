@@ -1,0 +1,4 @@
+_target_: catboost.CatBoostRegressor
+silent: True
+max_depth: 10
+iterations: 1200

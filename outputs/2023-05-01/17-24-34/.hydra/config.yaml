@@ -1,0 +1,7 @@
+train_data: data/external/green_tripdata_2021-01.parquet
+valid_data: data/external/green_tripdata_2021-02.parquet
+model:
+  _target_: catboost.
+  silent: true
+  max_depth: 10
+  iterations: 1200
