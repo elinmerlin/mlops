@@ -1,0 +1,8 @@
+train_data: data/external/green_tripdata_2021-01.parquet
+valid_data: data/external/green_tripdata_2021-02.parquet
+model:
+  _target_: sklearn.ensemble.GradientBoostingRegressor
+  max_depth: 4
+  min_samples_leaf: 1
+  n_estimators: 50
+  learning_rate: 0.05

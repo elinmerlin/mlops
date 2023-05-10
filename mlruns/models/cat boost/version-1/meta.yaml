@@ -1,0 +1,13 @@
+aliases: []
+creation_timestamp: 1683670458077
+current_stage: None
+description: ''
+last_updated_timestamp: 1683670458077
+name: cat boost
+run_id: 6eeeed8c9c054c758d1262753fbf6ef9
+run_link: ''
+source: file:///Users/macbook/Documents/DataScience/mlops/mlruns/0/6eeeed8c9c054c758d1262753fbf6ef9/artifacts/models/CatBoostRegressor
+status: READY
+status_message: null
+user_id: null
+version: 1

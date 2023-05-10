@@ -1,0 +1,13 @@
+aliases: []
+creation_timestamp: 1683670478128
+current_stage: None
+description: ''
+last_updated_timestamp: 1683670478128
+name: gradient boost
+run_id: c5d6c1d1cd2445f0afc279d7c33061fa
+run_link: ''
+source: file:///Users/macbook/Documents/DataScience/mlops/mlruns/0/c5d6c1d1cd2445f0afc279d7c33061fa/artifacts/models/GradientBoostingRegressor
+status: READY
+status_message: null
+user_id: null
+version: 1

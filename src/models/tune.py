@@ -29,7 +29,7 @@ def tune(
 
     def objective(trial: optuna.Trial) -> float:
         params = dict(
-            cat_features=["PU_DO"],
+            #cat_features=["PU_DO"],
             n_estimators=trial.suggest_int("n_estimators", low=50, high=500),
             max_depth=trial.suggest_int("max_depth", low=5, high=12),
             random_state=30,
@@ -63,8 +63,7 @@ def tune(
 @hydra.main(version_base="1.3", config_path="../config", config_name="train.yaml")
 def main(cfg: DictConfig):
     X_train, y_train, _, _ = get_datasets(cfg.train_data, cfg.valid_data)
-    tune(x=X_train,
-         y=y_train)
+    tune(x=X_train, y=y_train)
 
 if __name__ == "__main__":
     main()

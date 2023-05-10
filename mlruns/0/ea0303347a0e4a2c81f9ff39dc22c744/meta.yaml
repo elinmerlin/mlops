@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/macbook/Documents/DataScience/mlops/mlruns/0/ea0303347a0e4a2c81f9ff39dc22c744/artifacts
+end_time: 1683674055942
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ea0303347a0e4a2c81f9ff39dc22c744
+run_name: receptive-flea-236
+run_uuid: ea0303347a0e4a2c81f9ff39dc22c744
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683674048303
+status: 3
+tags: []
+user_id: macbook

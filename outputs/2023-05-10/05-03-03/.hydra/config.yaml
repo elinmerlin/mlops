@@ -1,0 +1,6 @@
+train_data: data/external/green_tripdata_2021-01.parquet
+valid_data: data/external/green_tripdata_2021-02.parquet
+add_train_data: data/external/green_tripdata_2021-04.parquet
+add_more_data: false
+model:
+  _target_: sklearn.linear_model.LinearRegression

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/macbook/Documents/DataScience/mlops/mlruns/0/6253b475cb024e9d8fc9f51f16eba966/artifacts
+end_time: 1683670736739
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6253b475cb024e9d8fc9f51f16eba966
+run_name: awesome-carp-307
+run_uuid: 6253b475cb024e9d8fc9f51f16eba966
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683670734354
+status: 3
+tags: []
+user_id: macbook

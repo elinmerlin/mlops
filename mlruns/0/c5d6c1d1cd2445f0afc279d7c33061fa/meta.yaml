@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/macbook/Documents/DataScience/mlops/mlruns/0/c5d6c1d1cd2445f0afc279d7c33061fa/artifacts
+end_time: 1683670391647
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c5d6c1d1cd2445f0afc279d7c33061fa
+run_name: sedate-mink-46
+run_uuid: c5d6c1d1cd2445f0afc279d7c33061fa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683670388870
+status: 3
+tags: []
+user_id: macbook

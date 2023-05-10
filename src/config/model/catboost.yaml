@@ -1,5 +1,5 @@
 _target_: catboost.CatBoostRegressor
 silent: True
 max_depth: 6
-n_estimators: 300
+n_estimators: 397
 

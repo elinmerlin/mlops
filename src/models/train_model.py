@@ -11,15 +11,21 @@ from sklearn.feature_extraction import DictVectorizer
 from sklearn.pipeline import make_pipeline
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_percentage_error
 import mlflow
-from mlflow import log_metric, log_params, log_artifacts, log_artifact
+from mlflow import log_metric, log_param, log_params, log_artifacts, log_artifact, catboost, sklearn
 import hydra
 from omegaconf import DictConfig
 
 
 PROJECT_ROOT = pathlib.Path(".").absolute().resolve()
 
-def read_data(path: str) -> pd.DataFrame:
-    df = pd.read_parquet(path)
+def read_data(path) -> pd.DataFrame:
+    if isinstance(path, list):
+        df1 = pd.read_parquet(path[0])
+        df2 = pd.read_parquet(path[1])
+        df = pd.concat([df1, df2])
+    else:
+        df = pd.read_parquet(path)
+
     df.lpep_dropoff_datetime = pd.to_datetime(df.lpep_dropoff_datetime)
     df.lpep_pickup_datetime = pd.to_datetime(df.lpep_pickup_datetime)
     df["duration"] = df.lpep_dropoff_datetime - df.lpep_pickup_datetime
@@ -89,9 +95,13 @@ def save_model(model, model_name):
 
 @hydra.main(version_base="1.3", config_path="../config", config_name="train.yaml")
 def main(cfg: DictConfig):
-
     # get datasets
-    X_train, y_train, X_valid, y_valid = get_datasets(cfg.train_data, cfg.valid_data)
+    if cfg.add_more_data:
+        X_train, y_train, X_valid, y_valid = get_datasets([cfg.train_data, cfg.add_train_data], cfg.valid_data)
+        log_param("data_path", f"train data - {cfg.train_data, cfg.add_train_data}, valid data - {cfg.valid_data}")
+    else:
+        X_train, y_train, X_valid, y_valid = get_datasets(cfg.train_data, cfg.valid_data)
+        log_param("data_path", f"train data - {cfg.train_data}, valid data - {cfg.valid_data}")
 
     # instantiate model
     model = hydra.utils.instantiate(cfg.model)
@@ -112,7 +122,11 @@ def main(cfg: DictConfig):
     np.savetxt(f'src/models/predictions/{model_name}/pred-{model_name}.txt', y_pred)
 
     # logging
-    log_params(cfg.model)
+    t_m = trained_model.steps[2][1]
+    if model_name == "CatBoostRegressor":
+        catboost.log_model(t_m, f"models/{model_name}")
+    else:
+        sklearn.log_model(t_m, f"models/{model_name}")
     log_metric("RMSE", mean_squared_error(y_valid, y_pred, squared=False))
     log_metric("MAPE", mean_absolute_percentage_error(y_valid, y_pred))
     log_metric("R2", r2_score(y_valid, y_pred))

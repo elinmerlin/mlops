@@ -1,7 +1,9 @@
 MLops
 ==============================
 
-mlops project
+python3 src/models/train_model.py model=catboost
+python3 src/models/tune.py
+
 
 Project Organization
 ------------

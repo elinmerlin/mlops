@@ -1,0 +1,9 @@
+train_data: data/external/green_tripdata_2021-03.parquet
+valid_data: data/external/green_tripdata_2021-04.parquet
+add_train_data: data/external/green_tripdata_2021-04.parquet
+add_more_data: true
+model:
+  _target_: catboost.CatBoostRegressor
+  silent: true
+  max_depth: 6
+  n_estimators: 397

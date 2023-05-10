@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/macbook/Documents/DataScience/mlops/mlruns/327357471137225753/c6b01ef952514d3a861e5d46a3373fde/artifacts
+end_time: 1683669995323
+entry_point_name: ''
+experiment_id: '327357471137225753'
+lifecycle_stage: active
+run_id: c6b01ef952514d3a861e5d46a3373fde
+run_name: '7'
+run_uuid: c6b01ef952514d3a861e5d46a3373fde
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683669995306
+status: 3
+tags: []
+user_id: macbook
