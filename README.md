@@ -17,27 +17,27 @@ The following commands are available:
 
  - To train the default model (Linear Regression) with January data for training and February data for validation:
 
-```python3 src/models/train_model.py```
+       python3 src/models/train_model.py
 
  - To apply other models and datasets, the parameters can be overwritten. For example:
 
-```python3 src/models/train_model.py model=catboost```
+       python3 src/models/train_model.py model=catboost
 
-```python3 src/models/train_model.py model=gradient_boosting train_data=data/external/green_tripdata_2021-03.parquet```
+       python3 src/models/train_model.py model=gradient_boosting train_data=data/external/green_tripdata_2021-03.parquet
 
  - To add additional data (April data by default) to the training dataset:
 
-```python3 src/models/train_model.py model=catboost add_more_data=true```
+       python3 src/models/train_model.py model=catboost add_more_data=true
 
  - To tune the model parameters:
 
-```python3 src/models/tune.py```
+       python3 src/models/tune.py
 
 The CatBoostRegressor model is hardcoded in tune.py.
 
  - CatBoostRegressor and GradientBoostingRegressor models trained on January data were registered in the MLflow model registry. Additionally, new models trained on March and March-April data were registered. To compare the performance of these models on unseen data (May data):
 
-```python3 src/models/offline_compare.py```
+       python3 src/models/offline_compare.py
 
 
 Project Organization
@@ -81,9 +81,9 @@ Project Organization
     │   │
     │   ├── models         <- Scripts to train models and then use trained models to make
     │   │   │                 predictions
-    │   │   ├── train_model.py      <- Trains model
-    │   │   └── batch_inference.py  <- Implements batch inference
-    │   │   └── offline_compare.py  <- Compares the models
+    │   │   ├── train_model.py      <- Train the model
+    │   │   └── batch_inference.py  <- Implement batch inference
+    │   │   └── offline_compare.py  <- Compare the models
     │   │   └── tune.py             <- Optimize the model parameters
     │   │
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
