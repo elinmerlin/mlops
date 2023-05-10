@@ -4,7 +4,7 @@ import pandas as pd
 import mlflow
 from flask import Flask, request, jsonify
 
-#RUN_ID = os.getenv("RUN_ID")
+
 model_name = "CatBoostRegressor"
 RUN_ID = "6eeeed8c9c054c758d1262753fbf6ef9"
 logged_model = f"runs:/{RUN_ID}/models/{model_name}"
