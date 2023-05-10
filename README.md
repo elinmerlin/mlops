@@ -35,7 +35,7 @@ The following commands are available:
 
 The CatBoostRegressor model is hardcoded in tune.py.
 
- - CatBoostRegressor and GradientBoostingRegressor models trained on January data were registered in the MLflow model registry. Additionally, new models trained on March and March-April data were registered. To compare the performance of these models on unseen data (May data):
+ - CatBoostRegressor and GradientBoostingRegressor models trained on January data were registered in the MLflow model registry. Additionally, new models were trained on March and March-April data. To compare the performance of these models on unseen data (May data):
 
        python3 src/models/offline_compare.py
 
